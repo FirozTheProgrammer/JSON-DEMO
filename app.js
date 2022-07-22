@@ -1,7 +1,10 @@
+//using jsonplaceholder
+
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => response.json())
   .then((json) => displayUser(json));
 
+//display user name
 function displayUser(users) {
   const userNames = users.map((userr) => userr.username);
   console.log(userNames);
@@ -16,4 +19,5 @@ function displayUser(users) {
   }
 }
 
+//update time
 document.querySelector(".demo").innerHTML = new Date();
